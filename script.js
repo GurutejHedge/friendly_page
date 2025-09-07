@@ -67,3 +67,21 @@ document.querySelectorAll('.polaroid img').forEach(img => {
     img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="100%" height="100%" fill="lightgray"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="black">No Photo</text></svg>';
   });
 });
+
+// List of compliments
+const compliments = [
+  "You make everything brighter 💙",
+  "Your smile is literally contagious 😄",
+  "Talking to you feels good 🤗",
+  "You’re effortlessly cool 🌸",
+  "Your energy makes boring days exciting ✨"
+];
+
+const btn = document.getElementById("complimentBtn");
+const text = document.getElementById("complimentText");
+
+// Add click event
+btn.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * compliments.length);
+  text.textContent = compliments[randomIndex];
+});
